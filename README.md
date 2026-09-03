@@ -4,7 +4,7 @@
 
 Code • Create • Innovate • Grow 🚀
 
-"🌐 Live Demo" (https://YOUR-LIVE-DOMAIN-HERE) · "💬 WhatsApp" (https://wa.me/254111783552)
+"🌐 Live Demo" (https://adezhost.vercel.app) · "💬 WhatsApp" (https://wa.me/254111783552)
 
 </div>---
 
