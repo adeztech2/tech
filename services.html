@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | ADEZ TECH</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#050505;color:#fff}
+a{text-decoration:none;color:inherit}
+
+nav{
+ position:sticky;top:0;z-index:1000;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:20px 7%;background:#080808;
+ border-bottom:1px solid #1d1d1d
+}
+.logo{font-size:25px;font-weight:900}
+.logo span{color:#00ff88}
+nav ul{display:flex;gap:25px;list-style:none}
+nav li a{color:#bbb;font-size:14px}
+nav li a:hover{color:#00ff88}
+
+.container{width:86%;max-width:1200px;margin:auto}
+.hero{text-align:center;padding:90px 20px 60px}
+.hero h1{font-size:55px}
+.hero h1 span{color:#00ff88}
+.hero p{color:#888;max-width:650px;margin:20px auto}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+ padding-bottom:80px
+}
+.card{
+ background:#0b0b0b;
+ border:1px solid #202020;
+ padding:30px;
+ border-radius:16px;
+ transition:.3s
+}
+.card:hover{border-color:#00ff88;transform:translateY(-5px)}
+.icon{font-size:38px;margin-bottom:18px}
+.card h2{margin-bottom:12px}
+.card p{color:#888;font-size:14px;margin-bottom:20px}
+.btn{
+ display:inline-block;padding:11px 18px;
+ background:#00ff88;color:#000;
+ border-radius:7px;font-weight:bold
+}
+footer{
+ border-top:1px solid #1d1d1d;
+ text-align:center;padding:30px;color:#777
+}
+
+@media(max-width:800px){
+ nav ul{display:none}
+ .hero h1{font-size:40px}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html" class="logo">ADEZ<span>TECH</span></a>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Our <span>Services</span></h1>
+<p>
+Professional technology and digital solutions designed
+for businesses, creators and individuals.
+</p>
+</section>
+
+<div class="container">
+<div class="grid">
+
+<div class="card">
+<div class="icon">🌐</div>
+<h2>Website Development</h2>
+<p>Professional responsive websites, landing pages and business platforms.</p>
+<a class="btn" href="pricing.html">View Pricing</a>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
+<h2>WhatsApp Bots</h2>
+<p>Custom WhatsApp automation and business bot solutions.</p>
+<a class="btn" href="pricing.html">View Pricing</a>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h2>Social Media</h2>
+<p>Social media tools and digital solutions for online businesses.</p>
+<a class="btn" href="pricing.html">View Pricing</a>
+</div>
+
+<div class="card">
+<div class="icon">💳</div>
+<h2>Payment Systems</h2>
+<p>Digital payment pages and transaction management solutions.</p>
+<a class="btn" href="pricing.html">View Pricing</a>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h2>Hosting & Deployment</h2>
+<p>Help deploying websites, APIs and applications online.</p>
+<a class="btn" href="pricing.html">View Pricing</a>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h2>Technical Support</h2>
+<p>Project troubleshooting, maintenance and technical assistance.</p>
+<a class="btn" href="https://wa.me/254111783552" target="_blank">
+Contact Us
+</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 ADEZ TECH — Code • Create • Innovate • Grow
+</footer>
+
+</body>
+</html>
