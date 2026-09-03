@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ADEZ TECH | Digital Solutions & Innovation</title>
+
+  <meta name="description"
+        content="ADEZ TECH provides websites, WhatsApp bots, social media solutions, digital services and technology solutions.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(5,5,5,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1c1c1c;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #00ff88;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00ff88;
+    }
+
+    .menu {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 7% 70px;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(0,255,136,0.12), transparent 35%),
+        #050505;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #1e8f60;
+      border-radius: 30px;
+      color: #00ff88;
+      font-size: 13px;
+      margin-bottom: 25px;
+      background: rgba(0,255,136,0.05);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      line-height: 1;
+      margin-bottom: 25px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #00ff88;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .primary {
+      background: #00ff88;
+      color: #000;
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,255,136,0.2);
+    }
+
+    .secondary {
+      border: 1px solid #333;
+      color: #fff;
+    }
+
+    .secondary:hover {
+      border-color: #00ff88;
+      color: #00ff88;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #888;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #00ff88;
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #080808;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    /* COMMUNITY */
+    .community {
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(0,255,136,0.08), transparent 45%),
+        #050505;
+    }
+
+    .community-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      padding: 45px 25px;
+      border-radius: 18px;
+    }
+
+    .contact-box p {
+      color: #999;
+      margin: 12px 0;
+    }
+
+    .contact-box a {
+      color: #00ff88;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #1c1c1c;
+      padding: 35px 7%;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+        border-bottom: 1px solid #222;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="logo">ADEZ<span>TECH</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <div class="badge">🚀 DIGITAL SOLUTIONS & INNOVATION</div>
+
+      <h1>
+        Build. Create.<br>
+        <span>Innovate.</span>
+      </h1>
+
+      <p>
+        ADEZ TECH provides modern digital solutions including
+        websites, WhatsApp bots, social media solutions,
+        payment platforms and technology services.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary"
+           href="https://wa.me/254111783552"
+           target="_blank">
+          💬 Contact Us
+        </a>
+
+        <a class="btn secondary"
+           href="#services">
+          Explore Services
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Technology built for individuals and businesses.</p>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Website Development</h3>
+        <p>
+          Modern, responsive and professional websites
+          designed for businesses, organizations and individuals.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>WhatsApp Bots</h3>
+        <p>
+          Powerful WhatsApp automation solutions,
+          custom bots and business automation systems.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Social Media Solutions</h3>
+        <p>
+          Digital solutions that help businesses manage
+          and grow their online presence.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💳</div>
+        <h3>Payment Solutions</h3>
+        <p>
+          Digital payment platforms and tools designed
+          to simplify online transactions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>Tech Support</h3>
+        <p>
+          Technical assistance, troubleshooting and
+          guidance for digital projects.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚀</div>
+        <h3>Hosting & Deployment</h3>
+        <p>
+          Assistance with deploying and maintaining
+          modern web applications and digital projects.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>About ADEZ TECH</h2>
+    </div>
+
+    <div class="about-content">
+
+      <p>
+        ADEZ TECH is a technology-focused digital solutions brand
+        dedicated to creating useful, reliable and modern digital
+        products.
+      </p>
+
+      <p>
+        From websites and WhatsApp automation to digital platforms
+        and online business solutions, we help turn ideas into
+        working technology.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community" id="community">
+
+    <div class="section-title">
+      <h2>Join Our Community</h2>
+
+      <p>
+        Connect with ADEZ TECH and receive updates,
+        announcements and technology information.
+      </p>
+    </div>
+
+    <div class="community-buttons">
+
+      <a class="btn primary"
+         href="https://chat.whatsapp.com/GewXopgxNhj02BG4T4VCnV"
+         target="_blank">
+        👥 Join WhatsApp Group
+      </a>
+
+      <a class="btn secondary"
+         href="https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m"
+         target="_blank">
+        📢 Follow WhatsApp Channel
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Contact ADEZ TECH</h2>
+      <p>Let's build something great together.</p>
+    </div>
+
+    <div class="contact-box">
+
+      <p>📱 WhatsApp</p>
+      <a href="https://wa.me/254111783552" target="_blank">
+        +254 111 783 552
+      </a>
+
+      <p>📧 Email</p>
+      <a href="mailto:support@adeztech.com">
+        support@adeztech.com
+      </a>
+
+      <div class="buttons">
+
+        <a class="btn primary"
+           href="https://wa.me/254111783552"
+           target="_blank">
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>ADEZ TECH</strong>. All rights reserved.
+    </p>
+
+    <p>
+      Code • Create • Innovate • Grow 🚀
+    </p>
+
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
