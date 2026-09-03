@@ -1,84 +1,161 @@
 🚀 ADEZ TECH
 
-Digital Solutions • Technology • Innovation
+<div align="center"><img src="./assets/adez-tech.gif" alt="ADEZ TECH" width="700">💻 Digital Solutions • Technology • Innovation
 
-Welcome to ADEZ TECH, a technology and digital solutions platform focused on building modern, reliable, and innovative solutions for individuals, creators, and businesses.
+Code • Create • Innovate • Grow 🚀
 
----
+"🌐 Live Demo" (https://YOUR-LIVE-DOMAIN-HERE) · "💬 WhatsApp" (https://wa.me/254111783552)
 
-🌐 About ADEZ TECH
+</div>---
 
-ADEZ TECH provides digital services and technology solutions including:
+🌟 About ADEZ TECH
 
-- 🌐 Website Development
-- 📱 Web & Mobile Applications
-- 🤖 WhatsApp Bot Development
-- 📲 Social Media Solutions
-- 💳 Digital & Payment Solutions
-- 🛠️ Technical Support
-- 🚀 Hosting & Deployment
-- 💡 Technology Consulting
+ADEZ TECH is a digital technology brand focused on creating modern, reliable and innovative solutions for individuals, businesses and organizations.
 
-Our mission is simple:
-
-«Code • Create • Innovate • Grow.»
+We turn ideas into practical digital products and services.
 
 ---
 
-✨ Features
+🛠️ Our Services
 
-The ADEZ TECH platform is designed to provide:
+🌐 Website Development
 
-- ⚡ Modern responsive website
-- 📱 Mobile-friendly interface
-- 🖥️ Professional technology-focused design
-- 💬 Direct WhatsApp communication
-- 📢 WhatsApp community integration
-- 📧 Customer support
-- 🚀 Scalable digital services
+We build modern and responsive websites for:
 
----
-
-📞 Contact ADEZ TECH
-
-WhatsApp
-
-+254 111 783 552
-
-"💬 Chat with ADEZ TECH on WhatsApp" (https://wa.me/254111783552)
-
-Email
-
-support@adeztech.com
-
-"📧 Contact Support" (mailto:support@adeztech.com)
+- Business websites
+- Company websites
+- Personal websites
+- Landing pages
+- Portfolio websites
+- E-commerce websites
+- Web applications
+- Custom websites
 
 ---
 
-👥 Join Our WhatsApp Community
+🤖 WhatsApp Bot Development
 
-WhatsApp Group
+Powerful WhatsApp automation solutions including:
 
-"🚀 Join ADEZ TECH WhatsApp Group" (https://chat.whatsapp.com/GewXopgxNhj02BG4T4VCnV)
-
-WhatsApp Channel
-
-"📢 Follow ADEZ TECH WhatsApp Channel" (https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m)
+- WhatsApp business bots
+- Automated replies
+- Multi-device bots
+- Custom commands
+- Group management
+- Auto-reply systems
+- Bot deployment
+- Custom WhatsApp automation
 
 ---
 
-🛠️ Technology
+📱 Social Media Solutions
 
-The ADEZ TECH website can be built using modern web technologies such as:
+Digital solutions for social media and online businesses:
 
-- HTML5
-- CSS3
-- JavaScript
-- Node.js
-- Express.js
-- React / Next.js
-- MongoDB
-- REST APIs
+- Social media management tools
+- Social media automation
+- Social media marketing platforms
+- Business promotion tools
+- Digital marketing solutions
+- Social media dashboards
+
+---
+
+💳 Payment Solutions
+
+Modern digital payment solutions including:
+
+- Payment platforms
+- Payment links
+- Transaction management
+- Payment dashboards
+- Digital payment integrations
+- Business payment solutions
+
+---
+
+🚀 Hosting & Deployment
+
+We help deploy and maintain digital projects using modern hosting platforms.
+
+Services include:
+
+- Website deployment
+- Web app deployment
+- Node.js deployment
+- Server setup
+- Domain configuration
+- Deployment troubleshooting
+- Application maintenance
+
+---
+
+🛠️ Technical Support
+
+Need help with a digital project?
+
+We provide assistance with:
+
+- Website errors
+- Deployment errors
+- JavaScript errors
+- Node.js issues
+- GitHub projects
+- Hosting problems
+- API integration
+- General technical troubleshooting
+
+---
+
+💡 Custom Digital Projects
+
+Have an idea?
+
+ADEZ TECH can help turn your idea into a working digital project.
+
+Examples include:
+
+- SaaS platforms
+- Business dashboards
+- Management systems
+- Automation systems
+- Customer portals
+- API-based applications
+- Custom web platforms
+
+---
+
+✨ Website Features
+
+The ADEZ TECH website is designed to provide:
+
+- 📱 Mobile-friendly design
+- 💻 Desktop support
+- 🌙 Modern dark interface
+- ⚡ Fast navigation
+- 🔗 WhatsApp integration
+- 📧 Email support
+- 🛠️ Service information
+- 📢 Community links
+- 🚀 Modern technology
+
+---
+
+🧰 Technologies
+
+ADEZ TECH projects may use:
+
+HTML5
+CSS3
+JavaScript
+Node.js
+Express.js
+REST APIs
+GitHub
+Vercel
+Render
+MongoDB
+Supabase
 
 ---
 
@@ -86,75 +163,79 @@ The ADEZ TECH website can be built using modern web technologies such as:
 
 ADEZ-TECH/
 │
+├── assets/
+│   └── adez-tech.gif
+│
 ├── index.html
+├── about.html
 ├── services.html
 ├── contact.html
-├── about.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
+├── login.html
+├── register.html
+├── dashboard.html
+├── style.css
+├── script.js
 │
 └── README.md
 
 ---
 
-🚀 Getting Started
+🚀 Live Website
 
-Clone the repository:
+<div align="center">🌐 ADEZ TECH Official Website
 
-git clone YOUR_REPOSITORY_URL
+"VISIT LIVE WEBSITE" (https://YOUR-LIVE-DOMAIN-HERE)
 
-Enter the project folder:
+</div>---
 
-cd ADEZ-TECH
+👥 ADEZ TECH Community
 
-Open the website:
+💬 WhatsApp Group
 
-index.html
+Join the ADEZ TECH community for discussions, support, announcements and technology updates.
 
-For a Node.js version, install dependencies:
+"👉 JOIN WHATSAPP GROUP" (https://chat.whatsapp.com/GewXopgxNhj02BG4T4VCnV)
 
-npm install
+📢 WhatsApp Channel
 
-Then start the application:
+Follow our official channel for the latest ADEZ TECH updates, projects, offers and technology news.
 
-npm start
-
----
-
-🎯 Our Vision
-
-ADEZ TECH aims to make powerful digital technology more accessible by creating solutions that are:
-
-Simple. Fast. Secure. Innovative.
+"👉 FOLLOW WHATSAPP CHANNEL" (https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m)
 
 ---
 
-📢 Stay Connected
+📞 Contact ADEZ TECH
 
-Follow ADEZ TECH for:
+📱 WhatsApp
 
-🔥 New projects
-🚀 Technology updates
-🤖 WhatsApp bot releases
-🌐 Website projects
-💡 Tutorials and tips
-📱 Digital service updates
++254 111 783 552
+
+"💬 Chat With ADEZ TECH" (https://wa.me/254111783552)
+
+📧 Email
+
+support@adeztech.com
+
+"📧 Contact Support" (mailto:support@adeztech.com)
 
 ---
 
-📄 License
+🤝 Work With Us
+
+Have a project, business idea or technology problem?
+
+Let's build it together.
+
+ADEZ TECH — Turning Ideas Into Digital Solutions. 🚀
+
+---
+
+<div align="center">💚 ADEZ TECH
+
+Code • Create • Innovate • Grow
+
+⭐ Star this repository if you like the project.
 
 © 2026 ADEZ TECH. All rights reserved.
 
-ADEZ TECH — Code • Create • Innovate • Grow 🚀
-
-
-You can save this as **`README.md`** in your GitHub `ADEZ-TECH` repository.
+</div>
