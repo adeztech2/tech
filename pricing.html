@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADEZ TECH | Pricing</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#050505;color:#fff}
+a{text-decoration:none;color:inherit}
+
+nav{
+ height:70px;padding:0 7%;display:flex;align-items:center;
+ justify-content:space-between;background:#070707;
+ border-bottom:1px solid #1c1c1c
+}
+.logo{font-size:24px;font-weight:900}
+.logo span{color:#00ff88}
+.nav{display:flex;gap:25px}
+.nav a{color:#aaa;font-size:14px}
+.nav a:hover{color:#00ff88}
+
+.hero{text-align:center;padding:75px 7% 45px}
+.hero h1{font-size:50px}
+.hero h1 span{color:#00ff88}
+.hero p{color:#888;margin-top:12px}
+
+.pricing{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:22px;padding:40px 7% 90px
+}
+.plan{
+ background:#0b0b0b;border:1px solid #222;
+ border-radius:17px;padding:35px;text-align:center
+}
+.plan.featured{border-color:#00ff88}
+.plan h2{margin-bottom:10px}
+.price{font-size:40px;font-weight:900;margin:20px 0}
+.price small{font-size:13px;color:#777}
+.plan ul{list-style:none;text-align:left;margin:25px 0}
+.plan li{padding:9px 0;color:#aaa}
+.plan li::before{content:"✓ ";color:#00ff88}
+.btn{
+ display:block;padding:13px;background:#00ff88;
+ color:#000;border-radius:8px;font-weight:bold
+}
+.custom{text-align:center;padding:70px 7%;background:#090909}
+.custom p{color:#888;margin:10px}
+.custom a{display:inline-block;margin-top:20px;padding:14px 25px;background:#00ff88;color:#000;border-radius:8px;font-weight:bold}
+
+footer{text-align:center;padding:30px;color:#666;border-top:1px solid #1c1c1c;font-size:13px}
+
+@media(max-width:800px){
+ .nav{display:none}
+ .pricing{grid-template-columns:1fr}
+ .hero h1{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html" class="logo">ADEZ<span>TECH</span></a>
+
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="login.html">Login</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Simple <span>Pricing</span></h1>
+<p>Choose a package or contact us for a custom project.</p>
+</section>
+
+<section class="pricing">
+
+<div class="plan">
+<h2>Starter</h2>
+<div class="price">KES 2,500</div>
+
+<ul>
+<li>Basic website</li>
+<li>Mobile responsive</li>
+<li>Contact section</li>
+<li>Basic deployment</li>
+</ul>
+
+<a class="btn" href="https://wa.me/254111783552?text=Hello%20ADEZ%20TECH%2C%20I%20want%20the%20Starter%20package." target="_blank">
+Get Started
+</a>
+</div>
+
+<div class="plan featured">
+<h2>Business</h2>
+<div class="price">KES 7,500</div>
+
+<ul>
+<li>Professional website</li>
+<li>Responsive design</li>
+<li>Multiple pages</li>
+<li>WhatsApp integration</li>
+<li>Deployment assistance</li>
+</ul>
+
+<a class="btn" href="https://wa.me/254111783552?text=Hello%20ADEZ%20TECH%2C%20I%20want%20the%20Business%20package." target="_blank">
+Choose Business
+</a>
+</div>
+
+<div class="plan">
+<h2>Custom</h2>
+<div class="price">Let's Talk</div>
+
+<ul>
+<li>Custom design</li>
+<li>Custom functionality</li>
+<li>Database integration</li>
+<li>API integration</li>
+<li>Technical support</li>
+</ul>
+
+<a class="btn" href="https://wa.me/254111783552?text=Hello%20ADEZ%20TECH%2C%20I%20need%20a%20custom%20project." target="_blank">
+Request Quote
+</a>
+</div>
+
+</section>
+
+<section class="custom">
+<h2>Need Something Different?</h2>
+<p>Tell us what you want to build.</p>
+<a href="https://wa.me/254111783552" target="_blank">Contact ADEZ TECH</a>
+</section>
+
+<footer>
+© 2026 ADEZ TECH — All rights reserved.
+</footer>
+
+</body>
+</html>
