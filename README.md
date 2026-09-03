@@ -184,7 +184,7 @@ ADEZ-TECH/
 
 <div align="center">🌐 ADEZ TECH Official Website
 
-"VISIT LIVE WEBSITE" (https://YOUR-LIVE-DOMAIN-HERE)
+"VISIT LIVE WEBSITE" (https://adezhost.vercel.app)
 
 </div>---
 
