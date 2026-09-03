@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Login | ADEZ TECH</title>
+  <title>Dashboard | ADEZ TECH</title>
 
   <style>
     * {
@@ -15,207 +15,424 @@
     }
 
     body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top, rgba(0,255,136,0.10), transparent 35%),
-        #050505;
+      background: #050505;
       color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      min-height: 100vh;
     }
 
-    .container {
-      width: 100%;
-      max-width: 420px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .logo {
-      text-align: center;
-      margin-bottom: 25px;
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 1px;
+    /* SIDEBAR */
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 250px;
+      height: 100vh;
+      background: #090909;
+      border-right: 1px solid #1d1d1d;
+      padding: 25px 15px;
+      z-index: 1000;
+      transition: 0.3s;
     }
 
-    .logo span {
-      color: #00ff88;
-    }
-
-    .card {
-      background: #0b0b0b;
-      border: 1px solid #222;
-      border-radius: 18px;
-      padding: 35px 30px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 8px;
-      font-size: 28px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #888;
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-
-    .form-group {
+    .brand {
+      padding: 0 12px 30px;
+      border-bottom: 1px solid #1d1d1d;
       margin-bottom: 20px;
     }
 
-    label {
-      display: block;
-      margin-bottom: 8px;
-      color: #ddd;
-      font-size: 14px;
-      font-weight: bold;
+    .brand h2 {
+      font-size: 25px;
+      font-weight: 900;
     }
 
-    input {
-      width: 100%;
-      padding: 14px;
-      background: #050505;
-      color: #fff;
-      border: 1px solid #292929;
-      border-radius: 9px;
-      outline: none;
-      font-size: 15px;
+    .brand h2 span {
+      color: #00ff88;
+    }
+
+    .brand p {
+      color: #666;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .menu-title {
+      color: #555;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 12px;
+      margin-bottom: 10px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 13px 12px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      color: #aaa;
+      font-size: 14px;
+      cursor: pointer;
       transition: 0.3s;
     }
 
-    input:focus {
-      border-color: #00ff88;
-      box-shadow: 0 0 0 2px rgba(0,255,136,0.08);
+    .nav-item:hover,
+    .nav-item.active {
+      background: rgba(0,255,136,0.08);
+      color: #00ff88;
     }
 
-    .password-box {
-      position: relative;
+    .nav-icon {
+      width: 23px;
+      text-align: center;
     }
 
-    .password-box input {
-      padding-right: 65px;
-    }
-
-    .show-password {
+    .logout {
       position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent;
-      border: none;
-      color: #00ff88;
+      bottom: 25px;
+      left: 15px;
+      right: 15px;
+    }
+
+    .logout .nav-item:hover {
+      color: #ff5555;
+      background: rgba(255,0,0,0.08);
+    }
+
+    /* MAIN */
+
+    .main {
+      margin-left: 250px;
+      min-height: 100vh;
+    }
+
+    /* TOPBAR */
+
+    .topbar {
+      height: 75px;
+      border-bottom: 1px solid #1d1d1d;
+      background: #080808;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 35px;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 25px;
       cursor: pointer;
-      font-size: 12px;
-      font-weight: bold;
     }
 
-    .forgot {
-      text-align: right;
-      margin-top: -8px;
-      margin-bottom: 22px;
+    .top-title h3 {
+      font-size: 18px;
     }
 
-    .forgot a {
-      color: #00ff88;
-      font-size: 13px;
+    .top-title p {
+      color: #666;
+      font-size: 11px;
+      margin-top: 3px;
     }
 
-    .login-btn {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 9px;
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
       background: #00ff88;
       color: #000;
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
     }
 
-    .login-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0,255,136,0.18);
-    }
-
-    .login-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .message {
-      display: none;
-      margin-bottom: 18px;
-      padding: 12px;
-      border-radius: 8px;
+    .profile-info strong {
+      display: block;
       font-size: 13px;
-      text-align: center;
     }
 
-    .error {
-      display: block;
-      background: rgba(255,0,0,0.08);
-      border: 1px solid rgba(255,0,0,0.3);
-      color: #ff7070;
+    .profile-info span {
+      color: #666;
+      font-size: 10px;
     }
 
-    .success {
-      display: block;
-      background: rgba(0,255,136,0.08);
-      border: 1px solid rgba(0,255,136,0.3);
+    /* CONTENT */
+
+    .content {
+      padding: 35px;
+    }
+
+    .welcome {
+      margin-bottom: 30px;
+    }
+
+    .welcome h1 {
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .welcome h1 span {
       color: #00ff88;
     }
 
-    .register {
-      text-align: center;
-      color: #888;
-      margin-top: 25px;
+    .welcome p {
+      color: #777;
       font-size: 14px;
     }
 
-    .register a {
-      color: #00ff88;
-      font-weight: bold;
+    /* STATS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 30px;
     }
 
-    .back {
-      text-align: center;
-      margin-top: 22px;
+    .stat-card {
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      border-radius: 13px;
+      padding: 22px;
     }
 
-    .back a {
+    .stat-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .stat-icon {
+      font-size: 23px;
+    }
+
+    .stat-label {
       color: #777;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    .back a:hover {
+    .stat-value {
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    /* QUICK ACTIONS */
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .section-header h2 {
+      font-size: 18px;
+    }
+
+    .section-header a {
       color: #00ff88;
+      font-size: 12px;
     }
 
-    .secure {
-      text-align: center;
-      margin-top: 22px;
-      color: #555;
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .action {
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      border-radius: 12px;
+      padding: 22px;
+      transition: 0.3s;
+    }
+
+    .action:hover {
+      border-color: #00ff88;
+      transform: translateY(-3px);
+    }
+
+    .action-icon {
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    .action h3 {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .action p {
+      color: #666;
       font-size: 11px;
     }
 
+    /* RECENT ORDERS */
+
+    .orders-box {
+      background: #0b0b0b;
+      border: 1px solid #1c1c1c;
+      border-radius: 13px;
+      overflow: hidden;
+    }
+
+    .order {
+      display: grid;
+      grid-template-columns: 1fr 1fr 120px 100px;
+      align-items: center;
+      padding: 17px 20px;
+      border-bottom: 1px solid #171717;
+      font-size: 13px;
+    }
+
+    .order:last-child {
+      border-bottom: none;
+    }
+
+    .order-head {
+      color: #555;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .order-name {
+      font-weight: bold;
+    }
+
+    .order-date {
+      color: #666;
+    }
+
+    .status {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 9px;
+      border-radius: 20px;
+      background: rgba(0,255,136,0.08);
+      color: #00ff88;
+      font-size: 10px;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 40px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    /* OVERLAY */
+
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 999;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1100px) {
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .actions {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      .sidebar {
+        left: -260px;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .overlay.open {
+        display: block;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .topbar {
+        padding: 0 18px;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .top-title {
+        display: none;
+      }
+
+      .content {
+        padding: 25px 17px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .actions {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .profile-info {
+        display: none;
+      }
+
+      .order {
+        grid-template-columns: 1fr 80px;
+        gap: 10px;
+      }
+
+      .order-date,
+      .order-head .hide-mobile {
+        display: none;
+      }
+    }
+
     @media (max-width: 480px) {
-      .card {
-        padding: 30px 20px;
+
+      .stats {
+        grid-template-columns: 1fr;
       }
 
-      .logo {
-        font-size: 26px;
+      .actions {
+        grid-template-columns: 1fr;
       }
 
-      .title {
-        font-size: 24px;
+      .welcome h1 {
+        font-size: 25px;
       }
     }
   </style>
@@ -223,181 +440,388 @@
 
 <body>
 
-  <div class="container">
+  <!-- SIDEBAR -->
 
-    <div class="logo">
-      ADEZ<span>TECH</span>
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <h2>ADEZ<span>TECH</span></h2>
+      <p>Digital Solutions & Innovation</p>
     </div>
 
-    <div class="card">
+    <div class="menu-title">
+      Main Menu
+    </div>
 
-      <h1 class="title">Welcome Back</h1>
+    <a href="dashboard.html" class="nav-item active">
+      <span class="nav-icon">🏠</span>
+      Dashboard
+    </a>
 
-      <p class="subtitle">
-        Login to your ADEZ TECH account
-      </p>
+    <a href="services.html" class="nav-item">
+      <span class="nav-icon">🛠️</span>
+      Services
+    </a>
 
-      <div id="message" class="message"></div>
+    <a href="orders.html" class="nav-item">
+      <span class="nav-icon">📦</span>
+      My Orders
+    </a>
 
-      <form id="loginForm">
+    <a href="payment.html" class="nav-item">
+      <span class="nav-icon">💳</span>
+      Payments
+    </a>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
+    <a href="bots.html" class="nav-item">
+      <span class="nav-icon">🤖</span>
+      WhatsApp Bots
+    </a>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            autocomplete="email"
-            required
-          >
+    <a href="profile.html" class="nav-item">
+      <span class="nav-icon">👤</span>
+      My Profile
+    </a>
+
+    <div class="menu-title" style="margin-top:25px;">
+      Community
+    </div>
+
+    <a
+      href="https://chat.whatsapp.com/GewXopgxNhj02BG4T4VCnV"
+      target="_blank"
+      class="nav-item">
+      <span class="nav-icon">👥</span>
+      WhatsApp Group
+    </a>
+
+    <a
+      href="https://whatsapp.com/channel/0029Vb8N0xYLikgHxdGh790m"
+      target="_blank"
+      class="nav-item">
+      <span class="nav-icon">📢</span>
+      WhatsApp Channel
+    </a>
+
+    <div class="logout">
+
+      <div class="nav-item" onclick="logout()">
+        <span class="nav-icon">🚪</span>
+        Logout
+      </div>
+
+    </div>
+
+  </aside>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- MAIN -->
+
+  <main class="main">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+      <div
+        class="mobile-menu"
+        onclick="openSidebar()">
+        ☰
+      </div>
+
+      <div class="top-title">
+        <h3>Dashboard</h3>
+        <p>Manage your ADEZ TECH account</p>
+      </div>
+
+      <div class="profile">
+
+        <div class="avatar" id="avatar">
+          A
         </div>
 
-        <div class="form-group">
+        <div class="profile-info">
+          <strong id="userName">
+            ADEZ User
+          </strong>
 
-          <label for="password">Password</label>
+          <span>
+            Customer Account
+          </span>
+        </div>
 
-          <div class="password-box">
+      </div>
 
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              autocomplete="current-password"
-              required
-            >
+    </header>
 
-            <button
-              type="button"
-              class="show-password"
-              onclick="togglePassword()">
-              SHOW
-            </button>
+    <!-- CONTENT -->
 
+    <div class="content">
+
+      <div class="welcome">
+
+        <h1>
+          Welcome back,
+          <span id="welcomeName">
+            User
+          </span> 👋
+        </h1>
+
+        <p>
+          Here's what's happening with your ADEZ TECH account.
+        </p>
+
+      </div>
+
+      <!-- STATS -->
+
+      <div class="stats">
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+            <span class="stat-label">
+              Account Balance
+            </span>
+
+            <span class="stat-icon">
+              💰
+            </span>
+          </div>
+
+          <div class="stat-value">
+            KSh 0.00
           </div>
 
         </div>
 
-        <div class="forgot">
-          <a href="forgot-password.html">
-            Forgot password?
-          </a>
+        <div class="stat-card">
+
+          <div class="stat-top">
+            <span class="stat-label">
+              Total Orders
+            </span>
+
+            <span class="stat-icon">
+              📦
+            </span>
+          </div>
+
+          <div class="stat-value">
+            0
+          </div>
+
         </div>
 
-        <button
-          type="submit"
-          class="login-btn"
-          id="loginBtn">
-          LOGIN
-        </button>
+        <div class="stat-card">
 
-      </form>
+          <div class="stat-top">
+            <span class="stat-label">
+              Completed
+            </span>
 
-      <div class="register">
-        Don't have an account?
-        <a href="register.html">Create Account</a>
+            <span class="stat-icon">
+              ✅
+            </span>
+          </div>
+
+          <div class="stat-value">
+            0
+          </div>
+
+        </div>
+
+        <div class="stat-card">
+
+          <div class="stat-top">
+            <span class="stat-label">
+              Pending
+            </span>
+
+            <span class="stat-icon">
+              ⏳
+            </span>
+          </div>
+
+          <div class="stat-value">
+            0
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="back">
-        <a href="index.html">← Back to ADEZ TECH</a>
+      <!-- QUICK ACTIONS -->
+
+      <div class="section-header">
+        <h2>Quick Actions</h2>
       </div>
 
-      <div class="secure">
-        🔒 Your account information is protected.
+      <div class="actions">
+
+        <a href="services.html" class="action">
+
+          <div class="action-icon">
+            🛠️
+          </div>
+
+          <h3>Browse Services</h3>
+
+          <p>
+            Explore our digital services.
+          </p>
+
+        </a>
+
+        <a href="payment.html" class="action">
+
+          <div class="action-icon">
+            💳
+          </div>
+
+          <h3>Make Payment</h3>
+
+          <p>
+            Top up your ADEZ account.
+          </p>
+
+        </a>
+
+        <a href="bots.html" class="action">
+
+          <div class="action-icon">
+            🤖
+          </div>
+
+          <h3>WhatsApp Bots</h3>
+
+          <p>
+            Explore WhatsApp automation.
+          </p>
+
+        </a>
+
+        <a
+          href="https://wa.me/254111783552"
+          target="_blank"
+          class="action">
+
+          <div class="action-icon">
+            💬
+          </div>
+
+          <h3>Contact Support</h3>
+
+          <p>
+            Chat with ADEZ TECH support.
+          </p>
+
+        </a>
+
+      </div>
+
+      <!-- RECENT ORDERS -->
+
+      <div class="section-header">
+
+        <h2>Recent Orders</h2>
+
+        <a href="orders.html">
+          View All →
+        </a>
+
+      </div>
+
+      <div class="orders-box">
+
+        <div class="order order-head">
+          <div>Service</div>
+          <div>Order ID</div>
+          <div class="hide-mobile">Date</div>
+          <div>Status</div>
+        </div>
+
+        <div id="orders">
+
+          <div class="empty">
+            No orders yet.<br>
+            Your recent orders will appear here.
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
-  </div>
+  </main>
 
   <script>
 
-    function togglePassword() {
+    /* CHECK LOGIN */
 
-      const password = document.getElementById("password");
-      const button = document.querySelector(".show-password");
+    const loggedIn =
+      localStorage.getItem("adezLoggedIn");
 
-      if (password.type === "password") {
-        password.type = "text";
-        button.textContent = "HIDE";
-      } else {
-        password.type = "password";
-        button.textContent = "SHOW";
-      }
-
+    if (loggedIn !== "true") {
+      window.location.href = "login.html";
     }
 
+    /* USER INFORMATION */
 
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
+    const savedUser =
+      JSON.parse(localStorage.getItem("adezUser"));
 
-      e.preventDefault();
+    if (savedUser) {
 
-      const email =
-        document.getElementById("email").value.trim();
+      const name =
+        savedUser.name || "User";
 
-      const password =
-        document.getElementById("password").value;
+      document.getElementById("userName")
+        .textContent = name;
 
-      const message =
-        document.getElementById("message");
+      document.getElementById("welcomeName")
+        .textContent = name.split(" ")[0];
 
-      const button =
-        document.getElementById("loginBtn");
+      document.getElementById("avatar")
+        .textContent =
+        name.charAt(0).toUpperCase();
+    }
 
+    /* MOBILE SIDEBAR */
 
-      message.className = "message";
-      message.textContent = "";
+    function openSidebar() {
 
+      document
+        .getElementById("sidebar")
+        .classList.add("open");
 
-      if (!email || !password) {
+      document
+        .getElementById("overlay")
+        .classList.add("open");
+    }
 
-        message.className = "message error";
-        message.textContent = "Please enter your email and password.";
+    function closeSidebar() {
 
-        return;
-      }
+      document
+        .getElementById("sidebar")
+        .classList.remove("open");
 
+      document
+        .getElementById("overlay")
+        .classList.remove("open");
+    }
 
-      /*
-        FRONTEND DEMO
+    /* LOGOUT */
 
-        This page is ready for a backend.
+    function logout() {
 
-        When we build the ADEZ TECH backend,
-        this section will send the credentials
-        securely to the server.
+      localStorage.removeItem("adezLoggedIn");
 
-        Example endpoint:
-
-        POST /api/login
-      */
-
-
-      button.disabled = true;
-      button.textContent = "LOGGING IN...";
-
-
-      setTimeout(function() {
-
-        /*
-          Temporary demo login.
-
-          Replace this with the real API
-          when the backend is connected.
-        */
-
-        message.className = "message success";
-        message.textContent = "Login successful. Redirecting...";
-
-        setTimeout(function() {
-          window.location.href = "dashboard.html";
-        }, 800);
-
-      }, 1000);
-
-    });
+      window.location.href =
+        "login.html";
+    }
 
   </script>
 
